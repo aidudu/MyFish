@@ -1,12 +1,15 @@
 PODS:
+  - IQKeyboardManagerSwift (4.0.9)
   - SDAutoLayout (2.1.7)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift (~> 4.0.9)
   - SDAutoLayout (~> 2.1.7)
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
 
-PODFILE CHECKSUM: 77af61a29637d6fa60657588d64a1857e514ae65
+PODFILE CHECKSUM: a8549a15c94eeabb197ccccc25b9a756cc2784f3
 
 COCOAPODS: 1.2.0

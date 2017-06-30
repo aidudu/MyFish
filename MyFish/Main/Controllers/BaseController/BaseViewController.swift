@@ -8,6 +8,7 @@
 
 import UIKit
 import SDAutoLayout
+import IQKeyboardManagerSwift
 
 class BaseViewController: UIViewController {
 

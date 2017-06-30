@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D6469FCF16C13B95BA0ACD2 /* Pods_MyFish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87DDCE2251DB2A80F8C1581 /* Pods_MyFish.framework */; };
+		F54224A51F05EAB7002700DD /* UIButton+MyFish.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54224A41F05EAB7002700DD /* UIButton+MyFish.swift */; };
 		F57AA86B1F04E8DE0014BC1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AA86A1F04E8DE0014BC1A /* AppDelegate.swift */; };
 		F57AA86D1F04E8DE0014BC1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AA86C1F04E8DE0014BC1A /* ViewController.swift */; };
 		F57AA8701F04E8DE0014BC1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57AA86E1F04E8DE0014BC1A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		369F2E3DA6573A166F5B1FEC /* Pods-MyFish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFish.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFish/Pods-MyFish.release.xcconfig"; sourceTree = "<group>"; };
 		73B9EF20C2019F54D8B4BE1F /* Pods-MyFish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFish/Pods-MyFish.debug.xcconfig"; sourceTree = "<group>"; };
 		E87DDCE2251DB2A80F8C1581 /* Pods_MyFish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54224A41F05EAB7002700DD /* UIButton+MyFish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+MyFish.swift"; sourceTree = "<group>"; };
 		F57AA8671F04E8DE0014BC1A /* MyFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57AA86A1F04E8DE0014BC1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57AA86C1F04E8DE0014BC1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,21 @@
 				369F2E3DA6573A166F5B1FEC /* Pods-MyFish.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F542249C1F05E96F002700DD /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		F542249D1F05E96F002700DD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F54224A41F05EAB7002700DD /* UIButton+MyFish.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		F57AA85E1F04E8DE0014BC1A = {
@@ -161,6 +178,8 @@
 		F57AA8821F04EABC0014BC1A /* CateGory */ = {
 			isa = PBXGroup;
 			children = (
+				F542249C1F05E96F002700DD /* NSObject */,
+				F542249D1F05E96F002700DD /* UIKit */,
 			);
 			path = CateGory;
 			sourceTree = "<group>";
@@ -236,6 +255,7 @@
 					F57AA8661F04E8DE0014BC1A = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 2VHL39V2UA;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -330,6 +350,7 @@
 				F57AA8881F04EB990014BC1A /* BaseViewController.swift in Sources */,
 				F57AA88C1F04EBC30014BC1A /* BaseTableCell.swift in Sources */,
 				F57AA88E1F04EBED0014BC1A /* BaseCollectionCell.swift in Sources */,
+				F54224A51F05EAB7002700DD /* UIButton+MyFish.swift in Sources */,
 				F57AA8961F04F30B0014BC1A /* LoginController.swift in Sources */,
 				F57AA88A1F04EBAC0014BC1A /* BaseView.swift in Sources */,
 				F57AA8901F04ECBD0014BC1A /* Headers.swift in Sources */,
@@ -456,12 +477,14 @@
 			baseConfigurationReference = 73B9EF20C2019F54D8B4BE1F /* Pods-MyFish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2VHL39V2UA;
 				INFOPLIST_FILE = MyFish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myHotel.MyFish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -471,6 +494,7 @@
 			baseConfigurationReference = 369F2E3DA6573A166F5B1FEC /* Pods-MyFish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2VHL39V2UA;
 				INFOPLIST_FILE = MyFish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

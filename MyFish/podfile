@@ -8,5 +8,6 @@ target 'MyFish' do
   # Pods for MyFish
 
 pod 'SDAutoLayout',' ~> 2.1.7'
+pod 'IQKeyboardManagerSwift','~> 4.0.9'
 
 end

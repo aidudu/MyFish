@@ -8,8 +8,12 @@
 
 import UIKit
 
-class LoginController: BaseViewController {
 
+class LoginController: BaseViewController,UITextFieldDelegate {
+    
+    fileprivate var userTextField:UITextField!
+    fileprivate var passwordTextField:UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +26,6 @@ class LoginController: BaseViewController {
         self.view.addSubview(headImageView)
         _ = headImageView.sd_layout().topSpaceToView(self.view,80)?.leftSpaceToView(self.view,(KScreenWidth-80)/2)?.heightIs(80)?.widthIs(80)
 
-        
         let topTool = UIToolbar.init()
         topTool.layer.cornerRadius = 5.0
         topTool.layer.masksToBounds = true
@@ -31,14 +34,15 @@ class LoginController: BaseViewController {
         
         let userImageV = UIImageView.init(image: UIImage.init(named: "zhanghao"))
         topTool.addSubview(userImageV)
-        _ = userImageV.sd_layout().leftSpaceToView(topTool,10)?.topSpaceToView(topTool,17)?.heightIs(16)?.widthIs(16)
+        _ = userImageV.sd_layout().leftSpaceToView(topTool,10)?.topSpaceToView(topTool,16)?.heightIs(18)?.widthIs(18)
         
-        let userTextField = UITextField.init()
+        userTextField = UITextField.init()
+        userTextField.delegate = self
         userTextField.placeholder = "请输入手机号/邮箱"
         userTextField.returnKeyType = UIReturnKeyType.next
         userTextField.font = UIFont.systemFont(ofSize: 15)
         topTool.addSubview(userTextField)
-        _ = userTextField.sd_layout().leftSpaceToView(userImageV,15)?.topSpaceToView(topTool,15)?.rightSpaceToView(topTool,10)?.heightIs(20)
+        _ = userTextField.sd_layout().leftSpaceToView(userImageV,15)?.topSpaceToView(topTool,10)?.rightSpaceToView(topTool,10)?.heightIs(30)
         
         let label = UILabel.init()
         label.backgroundColor = UIColor.yellow
@@ -47,23 +51,45 @@ class LoginController: BaseViewController {
         
         let passwordImageV = UIImageView.init(image: UIImage.init(named: "mima"))
         topTool.addSubview(passwordImageV)
-        _ = passwordImageV.sd_layout().leftSpaceToView(topTool,10)?.topSpaceToView(label,17)?.heightIs(16)?.widthIs(16)
+        _ = passwordImageV.sd_layout().leftSpaceToView(topTool,10)?.topSpaceToView(label,16)?.heightIs(18)?.widthIs(18)
         
-        let passwordTextField = UITextField.init()
+        passwordTextField = UITextField.init()
+        passwordTextField.delegate = self
         passwordTextField.font = UIFont.systemFont(ofSize: 15)
         passwordTextField.isSecureTextEntry = true
         passwordTextField.placeholder = "请输入密码"
         passwordTextField.returnKeyType = UIReturnKeyType.go
         topTool.addSubview(passwordTextField)
-        _ = passwordTextField.sd_layout().leftSpaceToView(passwordImageV,15)?.topSpaceToView(label,15)?.rightSpaceToView(topTool,10 + 20 + 5)?.heightIs(20)
-        
+        _ = passwordTextField.sd_layout().leftSpaceToView(passwordImageV,15)?.topSpaceToView(label,10)?.rightSpaceToView(topTool,10 + 20 + 5)?.heightIs(30)
         
         let eyeButton = UIButton.init(type: UIButtonType.custom)
         eyeButton.setImage(UIImage.init(named: "eye"), for: UIControlState.normal)
         eyeButton.setImage(UIImage.init(named: "eye-click"), for: UIControlState.selected)
         topTool.addSubview(eyeButton)
         _ = eyeButton.sd_layout().rightSpaceToView(topTool,10)?.topSpaceToView(label,15)?.widthIs(20)?.heightIs(20)
+        
+        let loginBtn = UIButton.CreatMainButton(title: "登录")
+        loginBtn.addTarget(self, action: #selector(loginClick), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(loginBtn)
+        _ = loginBtn.sd_layout().leftSpaceToView(self.view,20)?.rightSpaceToView(self.view,20)?.topSpaceToView(topTool,60)?.heightIs(40)
     }
+    
+    func loginClick() {
+        
+        userTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        print("点击登录了")
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userTextField{
+            passwordTextField.becomeFirstResponder()
+        }else{
+            loginClick()
+        }
+        return true
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
