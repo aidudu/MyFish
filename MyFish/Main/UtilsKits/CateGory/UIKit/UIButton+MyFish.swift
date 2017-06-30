@@ -23,7 +23,7 @@ extension UIButton{
         btn.layer.cornerRadius = 5.0
         btn.layer.masksToBounds = true
         return btn
-    }
+    }   
     
     //无背景色，
     class func CreatNomalButton(title:String,titleClor:UIColor,titleSelectColor:UIColor,titleFont:UIFont) -> UIButton{
