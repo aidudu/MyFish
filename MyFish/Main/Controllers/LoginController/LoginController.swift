@@ -79,6 +79,7 @@ class LoginController: BaseViewController,UITextFieldDelegate {
         userTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         print("点击登录了")
+        print("修复了")
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
