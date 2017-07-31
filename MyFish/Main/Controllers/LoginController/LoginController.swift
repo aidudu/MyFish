@@ -17,9 +17,6 @@ class LoginController: BaseViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-    
         initMainViews()
     }
     
