@@ -21,6 +21,11 @@
 		F57AA8901F04ECBD0014BC1A /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AA88F1F04ECBD0014BC1A /* Headers.swift */; };
 		F57AA8961F04F30B0014BC1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AA8941F04F30B0014BC1A /* LoginController.swift */; };
 		F57AA8971F04F30B0014BC1A /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F57AA8951F04F30B0014BC1A /* LoginController.xib */; };
+		F5E7804F1F2F28FE0080CF7A /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7804D1F2F28FE0080CF7A /* FirstController.swift */; };
+		F5E780501F2F28FE0080CF7A /* FirstController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E7804E1F2F28FE0080CF7A /* FirstController.xib */; };
+		F5E780521F2F291A0080CF7A /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E780511F2F291A0080CF7A /* ChatController.swift */; };
+		F5E780551F2F292B0080CF7A /* PersonalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E780531F2F292B0080CF7A /* PersonalController.swift */; };
+		F5E780561F2F292B0080CF7A /* PersonalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E780541F2F292B0080CF7A /* PersonalController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		F57AA8941F04F30B0014BC1A /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F57AA8951F04F30B0014BC1A /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		F57AA8981F04FC720014BC1A /* MyFish-Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFish-Briding-Header.h"; sourceTree = "<group>"; };
+		F5E7804D1F2F28FE0080CF7A /* FirstController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
+		F5E7804E1F2F28FE0080CF7A /* FirstController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstController.xib; sourceTree = "<group>"; };
+		F5E780511F2F291A0080CF7A /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		F5E780531F2F292B0080CF7A /* PersonalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalController.swift; sourceTree = "<group>"; };
+		F5E780541F2F292B0080CF7A /* PersonalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +155,9 @@
 		F57AA87E1F04EABC0014BC1A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F5E7804C1F2F28CA0080CF7A /* PersonController */,
+				F5E7804B1F2F28C30080CF7A /* ChatController */,
+				F5E7804A1F2F28AC0080CF7A /* FirstController */,
 				F57AA8911F04F18B0014BC1A /* Login-Regist */,
 				F57AA8861F04EB7E0014BC1A /* BaseController */,
 			);
@@ -219,6 +232,32 @@
 			path = LoginController;
 			sourceTree = "<group>";
 		};
+		F5E7804A1F2F28AC0080CF7A /* FirstController */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7804D1F2F28FE0080CF7A /* FirstController.swift */,
+				F5E7804E1F2F28FE0080CF7A /* FirstController.xib */,
+			);
+			path = FirstController;
+			sourceTree = "<group>";
+		};
+		F5E7804B1F2F28C30080CF7A /* ChatController */ = {
+			isa = PBXGroup;
+			children = (
+				F5E780511F2F291A0080CF7A /* ChatController.swift */,
+			);
+			path = ChatController;
+			sourceTree = "<group>";
+		};
+		F5E7804C1F2F28CA0080CF7A /* PersonController */ = {
+			isa = PBXGroup;
+			children = (
+				F5E780531F2F292B0080CF7A /* PersonalController.swift */,
+				F5E780541F2F292B0080CF7A /* PersonalController.xib */,
+			);
+			path = PersonController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,7 +323,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F57AA8751F04E8DE0014BC1A /* LaunchScreen.storyboard in Resources */,
+				F5E780501F2F28FE0080CF7A /* FirstController.xib in Resources */,
 				F57AA8971F04F30B0014BC1A /* LoginController.xib in Resources */,
+				F5E780561F2F292B0080CF7A /* PersonalController.xib in Resources */,
 				F57AA8721F04E8DE0014BC1A /* Assets.xcassets in Resources */,
 				F57AA8701F04E8DE0014BC1A /* Main.storyboard in Resources */,
 			);
@@ -345,8 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E780521F2F291A0080CF7A /* ChatController.swift in Sources */,
 				F57AA86D1F04E8DE0014BC1A /* ViewController.swift in Sources */,
 				F57AA86B1F04E8DE0014BC1A /* AppDelegate.swift in Sources */,
+				F5E780551F2F292B0080CF7A /* PersonalController.swift in Sources */,
+				F5E7804F1F2F28FE0080CF7A /* FirstController.swift in Sources */,
 				F57AA8881F04EB990014BC1A /* BaseViewController.swift in Sources */,
 				F57AA88C1F04EBC30014BC1A /* BaseTableCell.swift in Sources */,
 				F57AA88E1F04EBED0014BC1A /* BaseCollectionCell.swift in Sources */,

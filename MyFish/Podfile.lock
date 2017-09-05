@@ -1,15 +1,28 @@
 PODS:
+  - Charts/Core (3.0.1)
+  - Charts/Realm (3.0.1):
+    - Charts/Core
+    - RealmSwift (~> 1.1)
   - IQKeyboardManagerSwift (4.0.9)
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
   - SDAutoLayout (2.1.7)
 
 DEPENDENCIES:
+  - Charts/Realm
   - IQKeyboardManagerSwift (~> 4.0.9)
   - SDAutoLayout (~> 2.1.7)
 
 SPEC CHECKSUMS:
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
 
-PODFILE CHECKSUM: a8549a15c94eeabb197ccccc25b9a756cc2784f3
+PODFILE CHECKSUM: 0ed2478d663bfcb2e737e8c92b36494bf57fcc2d
 
 COCOAPODS: 1.2.0

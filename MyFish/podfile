@@ -9,5 +9,6 @@ target 'MyFish' do
 
 pod 'SDAutoLayout',' ~> 2.1.7'
 pod 'IQKeyboardManagerSwift','~> 4.0.9'
+pod 'Charts/Realm'
 
 end

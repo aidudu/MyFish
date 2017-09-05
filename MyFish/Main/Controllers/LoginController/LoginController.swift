@@ -16,10 +16,8 @@ class LoginController: BaseViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         
-        
-        
-    
         initMainViews()
     }
     
@@ -47,8 +45,9 @@ class LoginController: BaseViewController,UITextFieldDelegate {
         topTool.addSubview(userTextField)
         _ = userTextField.sd_layout().leftSpaceToView(userImageV,15)?.topSpaceToView(topTool,10)?.rightSpaceToView(topTool,10)?.heightIs(30)
         
+        
         let label = UILabel.init()
-        label.backgroundColor = UIColor.yellow
+        label.backgroundColor = ColorAlpha(rgbInt: 0x999999, alpha: 0.2)
         topTool.addSubview(label)
         _ = label.sd_layout().leftSpaceToView(topTool,0)?.rightSpaceToView(topTool,0)?.heightIs(1)?.topSpaceToView(topTool,50)
         
@@ -81,8 +80,9 @@ class LoginController: BaseViewController,UITextFieldDelegate {
         
         userTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
-        print("点击登录了")
-        print("修复了")
+        
+    
+        (UIApplication.shared.delegate as! AppDelegate).afterLogin()
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

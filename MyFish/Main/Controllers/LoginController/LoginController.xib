@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,8 +18,47 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="组-1" translatesAutoresizingMaskIntoConstraints="NO" id="4iR-by-aVh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="cfb-se-UYu"/>
+                    </constraints>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-dm-c9Y">
+                    <rect key="frame" x="0.0" y="180" width="375" height="130"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLU-lb-oET">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="Ijw-qd-UUX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="OLU-lb-oET" firstAttribute="leading" secondItem="aAo-dm-c9Y" secondAttribute="leading" id="1NS-hV-ETe"/>
+                        <constraint firstItem="OLU-lb-oET" firstAttribute="centerX" secondItem="aAo-dm-c9Y" secondAttribute="centerX" id="CpL-Xw-vpu"/>
+                        <constraint firstItem="OLU-lb-oET" firstAttribute="top" secondItem="aAo-dm-c9Y" secondAttribute="top" id="RSF-GZ-O09"/>
+                        <constraint firstAttribute="bottom" secondItem="OLU-lb-oET" secondAttribute="bottom" id="Tmj-HB-Alf"/>
+                        <constraint firstAttribute="trailing" secondItem="OLU-lb-oET" secondAttribute="trailing" id="eSw-Lv-60G"/>
+                        <constraint firstAttribute="height" constant="130" id="gNe-em-IyN"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="26" y="22"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aAo-dm-c9Y" secondAttribute="trailing" id="9fM-k1-Vab"/>
+                <constraint firstItem="aAo-dm-c9Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uzk-RY-CoL"/>
+                <constraint firstItem="4iR-by-aVh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eFG-ML-oKM"/>
+                <constraint firstItem="4iR-by-aVh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fb3-fh-xnr"/>
+                <constraint firstItem="aAo-dm-c9Y" firstAttribute="top" secondItem="4iR-by-aVh" secondAttribute="bottom" id="j9Y-iC-wWn"/>
+                <constraint firstAttribute="trailing" secondItem="4iR-by-aVh" secondAttribute="trailing" id="uv1-H4-IEU"/>
+            </constraints>
+            <point key="canvasLocation" x="69" y="-47"/>
         </view>
     </objects>
+    <resources>
+        <image name="组-1" width="750" height="402"/>
+    </resources>
 </document>

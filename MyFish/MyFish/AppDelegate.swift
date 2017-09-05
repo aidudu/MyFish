@@ -19,11 +19,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = LoginController()
+        window?.rootViewController = UINavigationController.init(rootViewController:LoginController())
         
         IQKeyboardManager.sharedManager().enable = true
         
         return true
+    }
+    
+    func afterLogin() {
+        
+        let firstNav = UINavigationController.init(rootViewController: FirstController())
+        let chatNav = UINavigationController.init(rootViewController: ChatController())
+        let personNav = UINavigationController.init(rootViewController: PersonalController())
+        
+        firstNav.title = "首页"
+        chatNav.title = "消息"
+        personNav.title = "我"
+        
+        firstNav.tabBarItem.image = UIImage.init(named: "home_n")
+        chatNav.tabBarItem.image = UIImage.init(named: "xiaoxi_n")
+        personNav.tabBarItem.image = UIImage.init(named: "me_n")
+
+        firstNav.tabBarItem.selectedImage = UIImage.init(named: "home_s")
+        firstNav.tabBarItem.selectedImage = UIImage.init(named: "xiaoxi_s")
+        firstNav.tabBarItem.selectedImage = UIImage.init(named: "me_s")
+
+        
+        
+        let tabBar = UITabBarController.init()
+        tabBar.viewControllers = [firstNav,chatNav,personNav]
+        window?.rootViewController = tabBar
     }
 
     
